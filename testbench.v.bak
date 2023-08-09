@@ -1,0 +1,13 @@
+module testbench ;
+reg [7:0]a;
+reg [7:0] b;
+wire [14:0] d_out;
+wallace_multiplier DUT( a[7:0],b[7:0],d_out[14:0]);
+initial 
+begin
+#5 a=6; b=7;
+#5 a=4; b=3;
+#a=2;b=6;
+# 20 $finish;
+end
+endmodule
